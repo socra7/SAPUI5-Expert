@@ -3,6 +3,8 @@
             xmlns:core="sap.ui.core"
             >
             <Dialog id="helloDialog" title="Hello {/recipient/name}">
-
+                <beginButton>
+                    <Button id="_IDGenButtonHelloDialog" text="{i18n>dialogCloseBut}" press=".onCloseDialog"></Button>
+                </beginButton>
             </Dialog>
 </core:FragmentDefinition>

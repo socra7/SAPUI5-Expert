@@ -37,7 +37,8 @@ sap.ui.define([
                 if (!this.byId("helloDialog")) {
                     Fragment.load({
                         id: oView.getId(),
-                        name: "logaligroup.SAPUI5.view.HelloDialog"
+                        name: "logaligroup.SAPUI5.view.HelloDialog",
+                        controller: this
                     }).then(function (oDialog) {
                         oView.addDependent(oDialog);
                         oDialog.open();
@@ -46,6 +47,10 @@ sap.ui.define([
                     this.byId("helloDialog").open();
                 }
 
+            },
+
+            onCloseDialog: function () {
+                this.byId("helloDialog").close();
             }
         });
 
