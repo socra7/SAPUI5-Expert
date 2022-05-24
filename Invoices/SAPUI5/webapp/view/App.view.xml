@@ -2,6 +2,7 @@
             id="_IDGenView1" 
             xmlns="sap.m" 
             xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core"
             displayBlock="true">
             <Shell id="_IDGenShell1" >
             <App id="_IDGenApp1" >
@@ -10,6 +11,7 @@
                     <content>
 
                         <mvc:XMLView id="_IDGenXMLView1" viewName="logaligroup.SAPUI5.view.HelloPanel"></mvc:XMLView>
+                        <core:Fragment fragmentName="logaligroup.SAPUI5.view.Form01" type="XML" />
                   
                     </content>
                  </Page>
