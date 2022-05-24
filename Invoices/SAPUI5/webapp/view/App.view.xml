@@ -8,11 +8,14 @@
             <App id="_IDGenApp1" >
                 <pages>
                  <Page id="_IDGenPage1" title="{i18n>appTitle}">
+                    <headerContent>
+                        <Button     id="_HelloButtonHeader" 
+                                    icon="sap-icon://hello-world"
+                                    press=".onOpenDialogHeader"
+                                    class="sapUiSmallMarginEnd"/>
+                    </headerContent>
                     <content>
-
                         <mvc:XMLView id="_IDGenXMLView1" viewName="logaligroup.SAPUI5.view.HelloPanel"></mvc:XMLView>
-                        <core:Fragment fragmentName="logaligroup.SAPUI5.view.Form01" type="XML" />
-                  
                     </content>
                  </Page>
                 </pages>
