@@ -9,7 +9,8 @@
                     class="sapUiResponsiveMargin"
                     width="auto">
                         <content>
-                        <Button id="_IDGenButton1" 
+                            <Button id="_IDGenButton1" 
+                                    icon="sap-icon://hello-world"
                                     text="{i18n>helloDialogBut}" 
                                     press=".onOpenDialog"
                                     class="sapUiSmallMarginEnd"/>
