@@ -2,21 +2,37 @@
          xmlns:mvc="sap.ui.core.mvc"
          controllerName="logaligroup.SAPUI5.controller.InvoicesList">
 
-         <List  id="_IDGenList1" 
+         <List  id="invoiceList" 
                 headerText="{i18n>invoiceListTitle}"
                 class="sapUiResponsiveMargin"
                 width="auto"
-                items="{invoices>/Invoices}">
+                items="{ path: 'invoices>/Invoices',
+                         sorter: { path : 'City',
+                         group : true  }  
+                        }">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1" >
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <SearchField id="_IDGenSearchField1" width="50%" search=".onFilterInvoices"  >
+                        </SearchField>
+                    </Toolbar>
+                </headerToolbar>
                 <items>
                     <ObjectListItem id="_IDGenObjectListItem1"
-                                    title="{invoices>Quantity} x {invoices>ShipName}" 
+                                    title="{invoices>Quantity} x {invoices>ProductName}" 
                                     number="{ parts : [ { path: 'invoices>ExtendedPrice'},
                                                         { path: 'currency>/usd' }],
                                                         type : 'sap.ui.model.type.Currency',
                                                         formatOptions : {
                                                             showMeasure: false
                                                         } }"
-                                    numberUnit="{currency>/usd}">
+                                    numberUnit="{currency>/usd}"
+                                    numberState="{= ${invoices>ExtendedPrice} > 100 ? 'Success' : 'Error' }">
+                        <firstStatus>
+                            <ObjectStatus id="_IDGenObjectStatus1" text="{ path: 'invoices>City', 
+                                                                           formatter: '.formatter.invoiceStatus' }">
+                            </ObjectStatus>
+                        </firstStatus>
                     </ObjectListItem>
                 </items>
         </List>
