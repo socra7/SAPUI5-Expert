@@ -12,9 +12,9 @@ sap.ui.define([
 
             switch (sStatus) {
 
-                case 'Berlin': return resourceBundle.getText("InvoiceStatusA");
-                case 'Hamburg': return resourceBundle.getText("InvoiceStatusB");
-                case 'London': return resourceBundle.getText("InvoiceStatusC");
+                case 'A': return resourceBundle.getText("InvoiceStatusA");
+                case 'B': return resourceBundle.getText("InvoiceStatusB");
+                case 'C': return resourceBundle.getText("InvoiceStatusC");
                 default: return sStatus;
 
             }
