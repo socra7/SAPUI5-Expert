@@ -27,7 +27,9 @@
                                                             showMeasure: false
                                                         } }"
                                     numberUnit="{currency>/usd}"
-                                    numberState="{= ${northwind>ExtendedPrice} > 100 ? 'Success' : 'Error' }">
+                                    numberState="{= ${northwind>ExtendedPrice} > 100 ? 'Success' : 'Error' }"
+                                    type="Navigation"
+                                    press="navigateToDetails">
 
                     </ObjectListItem>
                 </items>
