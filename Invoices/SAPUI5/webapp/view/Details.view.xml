@@ -3,13 +3,14 @@
             xmlns="sap.m" 
             xmlns:mvc="sap.ui.core.mvc"
             xmlns:core="sap.ui.core"
+            xmlns:logali="logaligroup.SAPUI5.control"
             displayBlock="true">
             
                  <Page id="Details" title="{i18n>detailsPageTitle}" showNavButton="true" navButtonPress=".onNavBack">
                     <ObjectHeader id="_IDGenObjectHeader1" title="{northwind>Quantity} x {northwind>ProductName}">
                         <attributes>
                             <ObjectAttribute id="_IDGenObjectAttribute0"  text="{northwind>ProductName}" />
-                             <ObjectAttribute id="_IDGenObjectAttribute1"  text="{northwind>ShipName}" />
+                            <ObjectAttribute id="_IDGenObjectAttribute1"  text="{northwind>ShipName}" />
                             <ObjectAttribute id="_IDGenObjectAttribute2"  text="{northwind>ShipAddress}" />
                             <ObjectAttribute id="_IDGenObjectAttribute3"  text="{northwind>ShipCity}" />
                             <ObjectAttribute id="_IDGenObjectAttribute4"  text="{northwind>ShipRegion}" />
@@ -18,6 +19,7 @@
                             <ObjectAttribute id="_IDGenObjectAttribute7"  text="{northwind>CustomerName}" />
                         </attributes>
                     </ObjectHeader>
+                    <logali:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange" />
                  </Page>
 
 </mvc:View>
