@@ -16,6 +16,9 @@ sap.ui.define([
 
             onInit: function () {
 
+                //Responsive compact or cozy, depends of device
+                this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+
             },
 
             onOpenDialogHeader : function () {

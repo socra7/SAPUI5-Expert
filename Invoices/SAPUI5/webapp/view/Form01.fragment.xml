@@ -4,7 +4,9 @@
             xmlns:f="sap.ui.layout.form">
             <Panel id="_IDPanelForm01" headerText="{i18n>PanelTitle}" 
                    class="sapUiResponsiveMarging"
-                   width="50%">
+                   width="50%"
+                   expandable="{device>/system/phone}"
+                   expanded="{= !${device>/system/phone} }">
                 <f:SimpleForm id="form" editable="true">
                     <Label id="_IDGenLabel1" text="{i18n>labelPerson}" labelFor="persName" />
                     <Input id="persName" width="40%" />
