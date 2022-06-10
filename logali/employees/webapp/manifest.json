@@ -69,7 +69,7 @@
           "bundleName": "logaligroup.employees.i18n.i18n"
         }
       },
-      "": {
+      "northwind": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {}

@@ -9,24 +9,14 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("logaligroup.employees.controller.View1", {
+
             onInit: function () {
 
-            },
+                var oJSONModel = new sap.ui.model.json.JSONModel();
+                oJSONModel.loadData("./localService/mockdata/ListData.json");
+                this.getView().setModel(oJSONModel);
 
-            onValidate: function () {
-
-                var inputEmployee = this.byId("inputEmployee");
-                var valueEmployee = inputEmployee.getValue();
-
-                if (valueEmployee.length === 6) {
-                   this.byId("labelCountry").setVisible(true);
-                   this.byId("slCountry").setVisible(true);
-                } else {
-                   this.byId("labelCountry").setVisible(false);
-                   this.byId("slCountry").setVisible(false);
-                }
             }
-
 
         });
     });
